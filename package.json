@@ -110,7 +110,6 @@
     "compile"
   ],
   "scripts": {
-    "vscode:prepublish": "npm run package && git add . && git commit -m 'up' && git push",
     "compile": "webpack",
     "watch": "webpack --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
@@ -119,9 +118,10 @@
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
-    "major": "vsce publish major",
-    "minor": "vsce publish minor",
-    "patch": "vsce publish patch"
+    "publish": "npm run package && git add . && git commit -m 'up'",
+    "major": "npm run publish && vsce publish major",
+    "minor": "npm run publish && vsce publish minor",
+    "patch": "npm run publish && vsce publish patch"
   },
   "devDependencies": {
     "@types/glob": "^7.1.4",
