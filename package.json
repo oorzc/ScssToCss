@@ -6,6 +6,16 @@
   "publisher": "oorzc",
   "author": "oorzc",
   "icon": "icon.png",
+  "keywords": [
+    "css",
+    "scss",
+    "sass",
+    "sass to css",
+    "scss to css",
+    "sass2css",
+    "scss2css",
+    "compile"
+  ],
   "engines": {
     "vscode": "^1.63.0"
   },
@@ -99,16 +109,6 @@
     "type": "git",
     "url": "https://github.com/oorzc/ScssToCss.git"
   },
-  "keywords": [
-    "css",
-    "scss",
-    "sass",
-    "sass to css",
-    "scss to css",
-    "sass2css",
-    "scss2css",
-    "compile"
-  ],
   "scripts": {
     "compile": "webpack",
     "watch": "webpack --watch",
@@ -118,10 +118,11 @@
     "pretest": "npm run compile-tests && npm run compile && npm run lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
-    "publish": "npm run package && git add . && git commit -m 'up'",
-    "major": "npm run publish && vsce publish major",
-    "minor": "npm run publish && vsce publish minor",
-    "patch": "npm run publish && vsce publish patch"
+    "commit": "npm run package && git add . && git commit -m 'up'",
+    "major": "npm run commit && vsce publish major",
+    "minor": "npm run commit && vsce publish minor",
+    "patch": "npm run commit && vsce publish patch",
+    "web": "ovsx publish"
   },
   "devDependencies": {
     "@types/glob": "^7.1.4",
