@@ -14,6 +14,7 @@
 - `showButtons`: 在状态栏中显示按钮，默认为 `true`
 - `autoPrefixer`: 启用自动前缀修复，默认为 `false`
 - `browsers`: 添加要支持的浏览器列表，默认为 `[]`
+- 
 
 ## 使用/快捷方式
 
